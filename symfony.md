@@ -30,8 +30,4 @@ $ composer require form validator twig-bundle orm-pack security-csrf
 
 https://symfony.com/doc/current/setup/web_server_configuration.html
 
-$composer require symfony/apache-pack
-
-
-
-
+$ composer require symfony/apache-pack
