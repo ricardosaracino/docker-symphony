@@ -25,7 +25,10 @@ $ composer require symfony/maker-bundle --dev
 
 $ composer require symfony/routing
 
+$ composer require symfony/http-foundation
+
 $ composer require form validator twig-bundle orm-pack security-csrf
+
 
 
 # Configuring a Web Server
@@ -33,3 +36,7 @@ $ composer require form validator twig-bundle orm-pack security-csrf
 https://symfony.com/doc/current/setup/web_server_configuration.html
 
 $ composer require symfony/apache-pack
+
+
+
+
