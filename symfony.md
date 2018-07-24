@@ -26,5 +26,12 @@ $ composer require symfony/maker-bundle --dev
 $ composer require form validator twig-bundle orm-pack security-csrf
 
 
+# Configuring a Web Server
+
+https://symfony.com/doc/current/setup/web_server_configuration.html
+
+$composer require symfony/apache-pack
+
+
 
 
