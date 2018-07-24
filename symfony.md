@@ -27,6 +27,7 @@ $ composer require symfony/routing
 
 $ composer require symfony/http-foundation
 
+# https://symfony.com/doc/current/components/serializer.html
 $ composer require symfony/serializer
 
 $ composer require form validator twig-bundle orm-pack security-csrf
