@@ -21,7 +21,7 @@ $ composer require sensio/framework-extra-bundle
 
 $ composer require sensiolabs/security-checker --dev
 
-$ composer require symfony/maker-bundle
+$ composer require symfony/maker-bundle --dev
 
 $ composer require form validator twig-bundle orm-pack security-csrf
 
