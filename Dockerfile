@@ -23,7 +23,12 @@ RUN php --version
 RUN composer --version
 
 
-ADD website.conf /etc/httpd/conf.d/
+COPY symfony-development.env /var/www/http/.env
+
+COPY php-development.ini /etc/php.ini
+
+ADD http-development.conf /etc/httpd/conf.d/
+
 
 EXPOSE 80
 
