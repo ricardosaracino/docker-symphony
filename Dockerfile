@@ -33,5 +33,3 @@ CMD ["/usr/sbin/httpd","-D","FOREGROUND"]
 # docker build -t website .
 
 # docker run -it --rm -p 80:80   -v %CD%/pull-list:/var/www/http   website
-
-# composer create-project symfony/website-skeleton .
