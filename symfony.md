@@ -23,6 +23,8 @@ $ composer require sensiolabs/security-checker --dev
 
 $ composer require symfony/maker-bundle --dev
 
+$ composer require symfony/routing
+
 $ composer require form validator twig-bundle orm-pack security-csrf
 
 
