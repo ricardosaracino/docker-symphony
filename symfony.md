@@ -23,14 +23,18 @@ $ composer require sensiolabs/security-checker --dev
 
 $ composer require symfony/maker-bundle --dev
 
+$ composer require security-csrf
+
+
+# Included create-project
+
+$ composer require form validator twig-bundle orm-pack
+
 $ composer require symfony/routing
 
 $ composer require symfony/http-foundation
 
 $ composer require symfony/serializer _https://symfony.com/doc/current/components/serializer.html_
-
-$ composer require form validator twig-bundle orm-pack security-csrf
-
 
 
 # Configuring a Web Server
