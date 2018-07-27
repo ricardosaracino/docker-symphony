@@ -7,7 +7,13 @@ RUN yum -y install epel-release
 
 RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 
-RUN yum install -y mysql httpd php71w php71w-cli php71w-opcache php71w-common php71w-mysqlnd php71w-mbstring php71w-xml
+# https://webtatic.com/packages/php71/
+
+# https://medium.com/ihme-tech/using-xdebug-with-intellij-inside-a-docker-container-dc8cbd844dc5
+
+RUN yum install -y mysql httpd
+
+RUN yum install -y php71w php71w-cli php71w-opcache php71w-common php71w-mysqlnd php71w-mbstring php71w-xml php71w-pecl-xdebug
 
 RUN cd /tmp
 
@@ -25,6 +31,9 @@ RUN composer --version
 
 COPY php-development.ini /etc/php.ini
 
+COPY php-xdebug.ini /etc/php.d/xdebug.ini
+
+
 COPY symfony-development.env /var/www/html/.env
 
 COPY php-development.ini /etc/php.ini
@@ -32,8 +41,13 @@ COPY php-development.ini /etc/php.ini
 ADD http-development.conf /etc/httpd/conf.d/
 
 
+
 RUN cd /var/www/html/
 
 EXPOSE 80
+
+EXPOSE 9001
+
+
 
 CMD ["/usr/sbin/httpd","-D","FOREGROUND"]

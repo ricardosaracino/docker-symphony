@@ -7,7 +7,14 @@ RUN yum -y install epel-release
 
 RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 
-RUN yum install -y mysql httpd php71w php71w-cli php71w-opcache php71w-common php71w-mysqlnd php71w-mbstring php71w-xml
+# https://webtatic.com/packages/php71/
+
+# https://medium.com/ihme-tech/using-xdebug-with-intellij-inside-a-docker-container-dc8cbd844dc5
+# https://blog.philipphauer.de/debug-php-docker-container-idea-phpstorm/
+
+RUN yum install -y mysql httpd
+
+RUN yum install -y php71w php71w-cli php71w-opcache php71w-common php71w-mysqlnd php71w-mbstring php71w-xml php71w-pecl-xdebug
 
 RUN cd /tmp
 
@@ -23,8 +30,10 @@ RUN php --version
 RUN composer --version
 
 
-
 COPY php-development.ini /etc/php.ini
+
+COPY php-xdebug.ini /etc/php.d/xdebug.ini
+
 
 COPY symfony-development.env /var/www/html/.env
 
@@ -38,6 +47,7 @@ RUN cd /var/www/html/
 
 EXPOSE 80
 
+EXPOSE 9001
 
 
 
@@ -51,5 +61,5 @@ EXPOSE 80
 
 # docker build -t website .
 
-# docker run -it --rm  --link docker_mariadb_1  -v %CD%/../pull-list-symfony:/var/www/html  website
+# docker run -it --rm  --link docker_mariadb_1  -v %CD%/../symfony-pull-list:/var/www/html  website
 

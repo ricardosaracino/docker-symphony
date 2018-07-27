@@ -4,23 +4,17 @@ apache:
     - mariadb:mariadb
   ports:
     - 80:80
+    - 9001:9001
   volumes:
-    - ./../pull-list-symfony:/var/www/html
+    - ./../symfony-pull-list:/var/www/html
+
 
 mariadb:
   image: mariadb
   ports:
     - 3306:3306
+  #volumes:
+  #  - ./../mariadb-data:/var/lib/mysql
   environment:
     MYSQL_ROOT_PASSWORD: rootpassword
 
-
-phpmyadmin:
-  image: phpmyadmin/phpmyadmin
-  links:
-    - mariadb:mariadb
-  ports:
-    - 8181:80
-  environment:
-    MYSQL_ROOT_PASSWORD: rootpassword
-    PMA_PORT: 3306
