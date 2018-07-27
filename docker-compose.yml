@@ -4,7 +4,7 @@ apache:
     - mariadb:mariadb
   ports:
     - 80:80
-    - 9001:9001
+    #- 9001:9001
   volumes:
     - ./../symfony-pull-list:/var/www/html
 
