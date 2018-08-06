@@ -15,7 +15,7 @@ $ composer create-project symfony/website-skeleton .
   * Read the documentation at https://symfony.com/doc
   
   
-  
+$ composer require beberlei/DoctrineExtensions
   
 $ composer require sensio/framework-extra-bundle
 
