@@ -44,5 +44,10 @@ https://symfony.com/doc/current/setup/web_server_configuration.html
 $ composer require symfony/apache-pack
 
 
+# Optimise composer class map
+
+https://symfony.com/doc/current/performance.html#use-composer-s-class-map-functionality
+
+composer dump-autoload --optimize
 
 
