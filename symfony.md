@@ -48,6 +48,6 @@ $ composer require symfony/apache-pack
 
 https://symfony.com/doc/current/performance.html#use-composer-s-class-map-functionality
 
-composer dump-autoload --optimize
+$ composer dump-autoload --optimize --no-dev --classmap-authoritative
 
 
