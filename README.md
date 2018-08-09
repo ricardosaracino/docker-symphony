@@ -54,7 +54,6 @@ https://symfony.com/doc/current/performance.html#use-composer-s-class-map-functi
 $ composer dump-autoload --optimize --no-dev --classmap-authoritative
 
 _Cache Tool_
-
 _https://github.com/gordalina/cachetool_
 
 
