@@ -13,7 +13,7 @@ RUN rpm -Uvh https://mirror.webtatic.com/yum/el7/webtatic-release.rpm
 
 RUN yum install -y mysql httpd
 
-RUN yum install -y php71w php71w-cli php71w-opcache php71w-common php71w-mysqlnd php71w-mbstring php71w-xml php71w-pecl-xdebug
+RUN yum install -y php71w php71w-cli php71w-opcache php71w-common php71w-mysqlnd php71w-mbstring php71w-xml php71w-opcache php71w-pecl-apcu php71w-pecl-xdebug
 
 RUN cd /tmp
 
