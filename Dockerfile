@@ -53,20 +53,16 @@ EXPOSE 9001
 
 
 
-# docker run --rm  -p 3306:3306 --name mariadb -e MYSQL_ROOT_PASSWORD=rootpassword -d mariadb
+# docker-compose up
 
+# docker run --rm  -p 3306:3306 --name mariadb -e MYSQL_ROOT_PASSWORD=rootpassword -d mariadb
 
 # docker build -t apache -f Dockerfile.apache .
 
 # docker run  --rm  -p 80:80  --link mariadb  -v %CD%/../pull-list-symfony:/var/www/html  apache
 
-
 # docker build -t website .
 
 # docker run -it --rm  --link docker_mariadb_1  -v %CD%/../symfony-pull-list:/var/www/html  website
-
-
-root:rootpassword@docker_mariadb_1:3306/symfony
-
 
 # docker run --name myadmin -d --link docker_mariadb_1:symfony -p 8080:80 -e PMA_HOST=docker_mariadb_1 -e PMA_PORT=3306 -e PMA_USER=root -e PMA_PASSWORD=rootpassword phpmyadmin/phpmyadmin
