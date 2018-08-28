@@ -39,6 +39,7 @@ $ composer require symfony/cache _apcu_
 
 $ composer require symfony/serializer _https://symfony.com/doc/current/components/serializer.html_
 
+$ composer require stof/doctrine-extensions-bundle _https://symfony.com/doc/master/bundles/StofDoctrineExtensionsBundle/index.html_
 
 # Configuring a Web Server
 
